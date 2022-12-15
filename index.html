@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body{
+  background-color:rgb(84, 84, 126) ;
+}
+.prompt{
+  font-size: 38px;
+  color: rgb(54, 54, 124);
+}
+.btn1{
+  background-color:#10101E;
+  color:white;
+  text-decoration:none;
+  border-radius:25px;
+  font-weight: bold;
+  border: none;
+  padding: 10px 27px;
+  text-align: center;
+  display: inline-block;
+  font-size: 12px;
+  margin: 4px 2px;
+  cursor: pointer;
+  transition-duration: 0.4s;
+  width: 20%;
+}
+      
+.btn1:hover{
+  background-color: rgb(54, 54, 124);
+  text-decoration: none;
+  transition: .4s;
+}
+
+    </style>
+</head>
+
+<body>
+  <br>
+ <h1 class="prompt">Prompt Calculator</h1>
+ <br>
+<script>
+var num1 = prompt('Enter First Number');
+var num2 = prompt('Enter Second Number');
+var op = prompt('Enter Operators From + - * / %');
+
+function add(a,b)
+{
+    var result =parseInt(a) + parseInt(b);
+    document.write("Addition Result Is : " + result)
+}
+
+function subract(a,b)
+{
+    var result = a - b;
+    document.write("Subraction Result Is : " + result)
+}
+
+function multiply(a,b)
+{
+    var result = a * b;
+    document.write("Multiplication Result Is : " + result)
+}
+
+function divide(a,b)
+{
+    var result = a / b;
+    document.write("Division Result Is : " + result)
+}
+
+function modulus(a,b)
+{
+    var result = a % b;
+    document.write("Modulus Result Is : " + result)
+}
+
+if(op == "+")
+{
+    add(num1,num2);
+}
+
+else if(op == "-")
+{
+    subract(num1,num2);
+}
+else if(op == "*")
+{
+    multiply(num1,num2);
+}
+else if(op == "/")
+{
+    divide(num1,num2);
+}
+else if(op == "%")
+{
+    modulus(num1,num2);
+}
+else{
+    alert('Invalid Operator !!');
+}
+</script>
+<br><br>
+<a href="basic.html" class="btn1">Go To Basic Calculator</a>    
+</body>
+</html>
